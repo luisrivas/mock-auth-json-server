@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "json-server": "^0.12.0",
+    "jsonwebtoken": "^7.4.2"
+  },
+  "scripts": {
+    "api": "json-server --watch ./data/books.json",
+    "api:auth": "node auth-api-server.js"
+  }
+}
