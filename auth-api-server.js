@@ -21,9 +21,9 @@ const verifyToken = token =>
   )
 
 const userdb = JSON.parse(fs.readFileSync('./data/users.json', 'UTF-8'))
-const isAuth = ({email, password}) => {
-  return userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
-}
+const isAuth = ({email, password}) =>
+  userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
+
 
 server.post('/auth/login', (req, res) => {
   const {email, password} = req.body
